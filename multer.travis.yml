@@ -1,0 +1,31 @@
+# ----------------------------------------------------------------------------
+#
+# Package             : strimzi-kafka-oauth
+# Source Repo         : https://github.com/strimzi/strimzi-kafka-oauth
+# Travis Job Link     : https://travis-ci.com/github/nageshlop/strimzi-kafka-oauth/builds/211182479
+# Created travis.yml  : No
+# Maintainer          : Nagesh Tarale <Nagesh.Tarale@ibm.com>
+#
+# Script License      : Apache 2.0
+#
+# ----------------------------------------------------------------------------
+sudo: false
+language: node_js
+arch:
+  - amd64
+  - ppc64le
+node_js:
+  - "0.10"
+  - "0.12"
+  - "4"
+  - "6"
+  - "8"
+  - "10"
+jobs:
+  exclude:
+      - arch: ppc64le
+        node_js:
+          - "0.10"
+      - arch: ppc64le
+        node_js:
+          - "0.12"
